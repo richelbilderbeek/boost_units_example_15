@@ -6,7 +6,9 @@
 
 namespace boost {
   namespace units {
-    typedef derived_dimension<boost::units::amount_base_dimension,1>::type sulfide_molecule_amount_dimension;
+    typedef derived_dimension<
+      boost::units::amount_base_dimension, 1
+    >::type sulfide_molecule_amount_dimension;
   } // namespace units
 } // namespace boost
 
@@ -14,8 +16,10 @@ namespace boost {
 namespace boost {
   namespace units {
     namespace si {
-      typedef unit<sulfide_molecule_amount_dimension,si::system> sulfide_molecule_amount;
-      BOOST_UNITS_STATIC_CONSTANT(sulfide_molecules_mol,sulfide_molecule_amount);
+      typedef unit<
+        sulfide_molecule_amount_dimension, si::system
+      > sulfide_molecule_amount;
+      BOOST_UNITS_STATIC_CONSTANT(sulfide_molecules_mol,sulfide_molecule_amount); //!OCLINT indeed long variable name, I choose to keep it in, for sake of the readability of this example code
     } // namespace si
   } // namespace units
 } //namespace boost
